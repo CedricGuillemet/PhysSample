@@ -8,6 +8,11 @@
     "build": "tsc -p .",
     "dev": "tsc --watch -p ."
   },
+  "browser": {
+  "fs": false,
+  "path": false,
+  "os": false
+},
   "keywords": [],
   "author": "",
   "license": "ISC",
@@ -25,6 +30,9 @@
     "@babylonjs/serializers": "^5.13.3",
     "ammojs-typed": "^1.0.6",
     "cannon-es": "^0.18.0",
-    "earcut": "^2.2.3"
+    "earcut": "^2.2.3",
+    "fs": "^0.0.1-security",
+    "path": "^0.12.7",
+    "stream": "^0.0.2"
   }
 }

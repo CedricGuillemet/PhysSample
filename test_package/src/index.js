@@ -1,5 +1,6 @@
 import { initializeBabylonApp } from "app_package";
 
+
 document.body.style.width = "100%";
 document.body.style.height = "100%";
 document.body.style.margin = "0";
@@ -31,3 +32,14 @@ if (DEV_BUILD) {
     assetsHostUrl = "https://nonlocal-assets-host-url/";
 }
 initializeBabylonApp({ canvas: canvas, assetsHostUrl: assetsHostUrl });
+
+/*
+window.initFunction = async function() {
+    await Recast();
+    console.log("A");
+};
+setTimeout(()=>{
+    console.log(Recast);
+}, 2000);
+*/
+//await window.initFunction();

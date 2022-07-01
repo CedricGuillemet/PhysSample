@@ -1,6 +1,8 @@
 import * as BABYLON from "@babylonjs/core";
+import * as Recast from "recast";
 
 class Playground {
+    public recastPlugin: any;
     public static CreateScene(engine: BABYLON.Engine, canvas: HTMLCanvasElement): BABYLON.Scene {
         // This creates a basic Babylon Scene object (non-mesh)
         var scene = new BABYLON.Scene(engine);
@@ -29,6 +31,14 @@ class Playground {
         // Our built-in 'ground' shape. Params: name, width, depth, subdivs, scene
         var ground = BABYLON.Mesh.CreateGround("ground1", 6, 6, 2, scene);
 
+        //init module
+        Recast.default().then((recast) => {
+            // save the plugin object
+            this.recastPlugin = recast;
+            // then can use the plugin and instanciate its objects
+            const _tempVec1 = new recast.Vec3();
+            console.log(_tempVec1);
+        });
         return scene;
     }
 }

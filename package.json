@@ -3,6 +3,11 @@
   "version": "1.0.0",
   "description": "",
   "private": "true",
+  "browser": {
+  "fs": false,
+  "path": false,
+  "os": false
+},
   "scripts": {
     "install": "npm-recursive-install --skip-root",
     "dev": "concurrently \"npm --prefix ./app_package run dev\" \"npm --prefix ./test_package run dev\"",
@@ -14,5 +19,9 @@
   "devDependencies": {
     "concurrently": "^6.2.1",
     "recursive-install": "^1.4.0"
+  },
+  "dependencies": {
+    "fs": "^0.0.1-security",
+    "path": "^0.12.7"
   }
 }

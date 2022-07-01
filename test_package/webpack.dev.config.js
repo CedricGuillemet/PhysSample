@@ -28,5 +28,13 @@ module.exports = {
                 }
             }
         ],
-    }
+    },
+	resolve: {
+        fallback: {
+            "fs": false
+        },
+    },
+	experiments: {
+		topLevelAwait: true
+	}
 };
